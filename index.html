@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar números</title>
+</head>
+
+
+
+<style>
+    * { 
+        padding: 0;
+        margin: 0;
+        font-size: 25px;
+        font-family: monospace;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .container {
+        background-color: rgb(3, 4, 58);
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .calculadora {
+        background-color: rgb(204, 156, 223);
+        height: 400px;
+        width: 600px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 30px;
+    }
+
+    .calculadora input {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .calculadora a{
+        margin-top: 20px;
+        background-color: rgb(221, 108, 108);
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .calculadora a:hover{
+        cursor: pointer;
+        background-color: rgb(224, 171, 171);
+    }
+
+</style>
+
+
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <input id="valor1" type="text" placeholder="Digite um valor">
+            <input id="valor2" type="text" placeholder="Digite um valor">
+            <a id="btnSomar">Somar</a>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    //variaveis são dados armazenados no computador
+    //variaveis tem nomes, e podem conter varios tipos de dados
+    //dentro de uma variavel: numero, texto ou qualquer valor similar
+
+    //int, float
+    const valor1   = document.getElementById("valor1");
+    const valor2   = document.getElementById("valor2");
+    const btnSomar = document.getElementById("btnSomar");
+
+    btnSomar.addEventListener('click', () => {
+        let v1 = Number(valor1.value);
+        let v2 = Number(valor2.value);
+        let resultado = v1 + v2;
+        //concatenar
+        //alert("O resultado é: " + resultado);
+        confirm("O resultado é: " + resultado);
+    });
+
+
+    //adicao = +, subtracao =  -, divisao = /, multiplicacao = *
+
+
+    
+</script>
+
+</html>
